@@ -2,6 +2,7 @@ package net.nvsoftware.springlive.service;
 
 import net.nvsoftware.springlive.error.ProductNotFoundException;
 import net.nvsoftware.springlive.model.Product;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.UUID;
 
 @Service
 public class ProductServiceImpl implements ProductService {
+
     List<Product> productList = new ArrayList<>();
     @Override
     public Product save(Product product) {

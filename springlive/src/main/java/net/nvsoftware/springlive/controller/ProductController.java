@@ -11,8 +11,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/v1/product")
 public class ProductController {
-    @Qualifier("productServiceImpl")
+
     @Autowired
+    @Qualifier("productServiceImpl")
     private ProductService productService;
 
     @PostMapping("")

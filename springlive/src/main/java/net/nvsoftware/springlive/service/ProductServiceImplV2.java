@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 @Service
 public class ProductServiceImplV2 implements ProductService {
 
+    @Autowired
     private ProductRepository productRepository;
     @Override
     public Product save(Product product) {
