@@ -19,7 +19,7 @@ public class PaymentEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private long orderId;
-    private long paymentMode;
+    private String paymentMode;
     private long totalAmount;
     private Instant paymentDate;
     private String paymentStatus;
