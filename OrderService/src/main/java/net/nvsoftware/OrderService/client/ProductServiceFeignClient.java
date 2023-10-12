@@ -1,4 +1,4 @@
-package net.nvsoftware.OrderService.controller;
+package net.nvsoftware.OrderService.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.HttpStatus;
