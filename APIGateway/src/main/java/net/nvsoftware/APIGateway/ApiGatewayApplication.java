@@ -1,7 +1,11 @@
 package net.nvsoftware.APIGateway;
 
+import lombok.Builder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.gateway.filter.ratelimit.KeyResolver;
+import org.springframework.context.annotation.Bean;
+import reactor.core.publisher.Mono;
 
 @SpringBootApplication
 public class ApiGatewayApplication {
@@ -10,4 +14,8 @@ public class ApiGatewayApplication {
 		SpringApplication.run(ApiGatewayApplication.class, args);
 	}
 
+	@Bean
+	KeyResolver userIdSolver() {
+		return exchange -> Mono.just("userId");
+	}
 }
