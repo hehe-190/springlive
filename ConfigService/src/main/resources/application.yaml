@@ -22,7 +22,7 @@ eureka:
       #defaultZone: http://host.docker.internal:8050/eureka
       #defaultZone: ${EUREKA_SERVER:http://:localhost:8050}/eureka
       #defaultZone: http://${SERVER_URL:localhost}:8050/eureka
-      defaultZone: http://${SERVER_URL：localhost}:8050/eureka
+      defaultZone: http://${SERVER_URL:localhost}:8050/eureka
 
 
 
