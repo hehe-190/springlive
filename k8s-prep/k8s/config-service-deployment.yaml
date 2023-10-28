@@ -16,6 +16,12 @@ spec:
         image: terry190/cofig-service
         ports:
         - containerPort: 8051
+        env:
+          - name: EUREKA_SERVER
+            valueFrom:
+              configMapKeyRef:
+                key: eureka_server
+                name: eureka-cm
 
 ---
 
@@ -29,4 +35,8 @@ spec:
   ports:
   - port: 80
     targetPort: 8051
+    env:
+      - name: SERVER_URL
+
+
 
