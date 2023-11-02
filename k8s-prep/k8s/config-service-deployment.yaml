@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: config-service-app
-        image: terry190/cofig-service
+        image: terry190/config-service
         ports:
         - containerPort: 8051
         env:
